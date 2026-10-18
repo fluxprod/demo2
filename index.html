@@ -1269,7 +1269,6 @@
     return pr[key];
   }
 
-  // обе версии стартуют одновременно: переключение = только громкость, без стыков
   async function selectExample(i){
     chosen = true;
     exBtns.forEach(function(x){ x.classList.toggle('on', +x.dataset.p === i); });
@@ -1288,9 +1287,8 @@
     if (wasPlaying) startBoth(0);
   }
 
+  // обе версии стартуют одновременно: переключение = только громкость, без стыков
   function startBoth(from){
-
-
     killSrc();
     if (mainAudio) mainAudio.pause();
     var pr = pairs[ex];
